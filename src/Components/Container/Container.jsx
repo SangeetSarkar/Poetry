@@ -7,10 +7,10 @@ function Container() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.VITE_SERVER}/all`)
+      .get(`${import.meta.env.VITE_SERVER}/all`)
       .then((res) => setData(() => res.data));
   }, []);
-  console.log(data);
+  
   return (
     <>
       {data &&
